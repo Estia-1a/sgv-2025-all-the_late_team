@@ -109,9 +109,11 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
     border-color: #0078d4;
     outline: none;
+}
+
 /* Bandeau header */
-.header-bandeau {
-    background: #333;
+header {
+    background: #0078d4;
     color: #fff;
     padding: 1.2rem 0;
     text-align: center;
@@ -122,8 +124,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Bandeau footer */
-.footer-bandeau {
-    background: #333;
+footer {
+    background: #222;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
