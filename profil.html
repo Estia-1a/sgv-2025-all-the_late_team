@@ -5,6 +5,27 @@
     <title>Profil Utilisateur</title>
     <link rel="stylesheet" href="styles\desktop.css">
 </head>
+<header>
+    <h1>Profil Utilisateur</h1>
+    <div class="profil-photo-section">
+        <label for="photo-profil" class="photo-label">
+            <img id="photo-preview" src="images/default-profile.png" alt="Photo de profil" style="width:80px;height:80px;border-radius:50%;object-fit:cover;cursor:pointer;">
+            <input type="file" id="photo-profil" name="photo-profil" accept="image/*" style="display:none;" onchange="previewPhoto(event)">
+        </label>
+    </div>
+    <script>
+    function previewPhoto(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('photo-preview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+    </script>
+</header>
 <body>
     <h2>Profil Utilisateur</h2>
     <form class="profil-form">
